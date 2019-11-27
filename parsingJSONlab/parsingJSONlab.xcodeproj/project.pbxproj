@@ -15,6 +15,9 @@
 		637349B6238EE84B00C1ADCF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 637349B5238EE84B00C1ADCF /* Assets.xcassets */; };
 		637349B9238EE84B00C1ADCF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637349B7238EE84B00C1ADCF /* LaunchScreen.storyboard */; };
 		637349C1238EE95800C1ADCF /* UserGeneratorVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637349C0238EE95800C1ADCF /* UserGeneratorVC.swift */; };
+		637349C3238EF2F300C1ADCF /* weather.json in Resources */ = {isa = PBXBuildFile; fileRef = 637349C2238EF2F300C1ADCF /* weather.json */; };
+		637349C5238EF32100C1ADCF /* color.json in Resources */ = {isa = PBXBuildFile; fileRef = 637349C4238EF32100C1ADCF /* color.json */; };
+		637349C7238EF33100C1ADCF /* randomUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 637349C6238EF33100C1ADCF /* randomUser.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +31,9 @@
 		637349B8238EE84B00C1ADCF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		637349BA238EE84B00C1ADCF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		637349C0238EE95800C1ADCF /* UserGeneratorVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGeneratorVC.swift; sourceTree = "<group>"; };
+		637349C2238EF2F300C1ADCF /* weather.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = weather.json; sourceTree = "<group>"; };
+		637349C4238EF32100C1ADCF /* color.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = color.json; sourceTree = "<group>"; };
+		637349C6238EF33100C1ADCF /* randomUser.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = randomUser.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				637349C0238EE95800C1ADCF /* UserGeneratorVC.swift */,
 				637349B0238EE84500C1ADCF /* ColorsAPI.swift */,
 				637349B2238EE84500C1ADCF /* Main.storyboard */,
+				637349C2238EF2F300C1ADCF /* weather.json */,
+				637349C4238EF32100C1ADCF /* color.json */,
+				637349C6238EF33100C1ADCF /* randomUser.json */,
 				637349B5238EE84B00C1ADCF /* Assets.xcassets */,
 				637349B7238EE84B00C1ADCF /* LaunchScreen.storyboard */,
 				637349BA238EE84B00C1ADCF /* Info.plist */,
@@ -131,7 +140,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				637349C5238EF32100C1ADCF /* color.json in Resources */,
+				637349C3238EF2F300C1ADCF /* weather.json in Resources */,
 				637349B9238EE84B00C1ADCF /* LaunchScreen.storyboard in Resources */,
+				637349C7238EF33100C1ADCF /* randomUser.json in Resources */,
 				637349B6238EE84B00C1ADCF /* Assets.xcassets in Resources */,
 				637349B4238EE84500C1ADCF /* Main.storyboard in Resources */,
 			);
