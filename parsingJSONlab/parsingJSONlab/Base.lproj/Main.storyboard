@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--First-->
+        <!--Weather VC-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
-                <viewController id="9pv-A4-QxB" customClass="WeatherAPI" customModule="parsingJSONlab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Weather VC" id="9pv-A4-QxB" customClass="WeatherViewController" customModule="parsingJSONlab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,8 +27,21 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RtA-cp-j6W">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="weatherCell" id="wJb-ZG-9hA">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="wJb-ZG-9hA" id="r4n-TH-7jr">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="SLn-5Q-1z9" kind="show" id="c5Y-Wu-A5S"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -44,16 +57,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="First" image="first" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" id="LZj-uh-jL1"/>
+                    <connections>
+                        <outlet property="weatherTV" destination="RtA-cp-j6W" id="SwG-dt-k5O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
+            <point key="canvasLocation" x="1659.4202898550725" y="-320.08928571428572"/>
         </scene>
-        <!--Second-->
+        <!--Color-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
-                <viewController id="8rJ-Kc-sve" customClass="ColorsAPI" customModule="parsingJSONlab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="8rJ-Kc-sve" customClass="ColorsVC" customModule="parsingJSONlab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -87,7 +103,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Second" image="second" id="cPa-gy-q4n"/>
+                    <tabBarItem key="tabBarItem" title="Color" image="paintbrush" catalog="system" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="colorsViewController" destination="UMH-L7-tCD" id="TDt-Cq-Qeh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
@@ -103,7 +122,7 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="QNE-1U-Od6" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
                         <segue destination="sbO-vt-l9Y" kind="relationship" relationship="viewControllers" id="YMY-cE-Jb6"/>
                     </connections>
@@ -112,7 +131,7 @@
             </objects>
             <point key="canvasLocation" x="-601" y="441"/>
         </scene>
-        <!--Item-->
+        <!--Random User-->
         <scene sceneID="dXl-Fh-WIv">
             <objects>
                 <viewController id="sbO-vt-l9Y" customClass="UserGeneratorVC" customModule="parsingJSONlab" customModuleProvider="target" sceneMemberID="viewController">
@@ -134,15 +153,80 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vu7-er-wgV"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="VQh-nb-EwE"/>
+                    <tabBarItem key="tabBarItem" title="Random User" image="person.3" catalog="system" id="VQh-nb-EwE"/>
+                    <connections>
+                        <outlet property="randomUserViewController" destination="qJr-pX-Zpp" id="3Jc-by-QfF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nuc-NL-Ku5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="747.82608695652175" y="1034.5982142857142"/>
         </scene>
+        <!--Detailed Weather VC-->
+        <scene sceneID="5He-mr-c0P">
+            <objects>
+                <viewController title="Detailed Weather VC" id="SLn-5Q-1z9" customClass="DetailedWeatherVC" customModule="parsingJSONlab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hwe-s2-yoZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temp" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1d7-62-0fI">
+                                <rect key="frame" x="20" y="188" width="374" height="95.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="80"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nwh-Zi-Mko">
+                                <rect key="frame" x="20" y="303.5" width="374" height="37"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="1d7-62-0fI" firstAttribute="leading" secondItem="UAj-6V-5U5" secondAttribute="leading" constant="20" id="4mQ-F9-xCe"/>
+                            <constraint firstItem="nwh-Zi-Mko" firstAttribute="top" secondItem="1d7-62-0fI" secondAttribute="bottom" constant="20" id="7TW-pK-7zM"/>
+                            <constraint firstItem="UAj-6V-5U5" firstAttribute="trailing" secondItem="nwh-Zi-Mko" secondAttribute="trailing" constant="20" id="7i0-G2-eCU"/>
+                            <constraint firstItem="nwh-Zi-Mko" firstAttribute="leading" secondItem="UAj-6V-5U5" secondAttribute="leading" constant="20" id="LEL-Cj-fcZ"/>
+                            <constraint firstItem="UAj-6V-5U5" firstAttribute="trailing" secondItem="1d7-62-0fI" secondAttribute="trailing" constant="20" id="dm9-QE-Vqm"/>
+                            <constraint firstItem="1d7-62-0fI" firstAttribute="top" secondItem="UAj-6V-5U5" secondAttribute="top" constant="100" id="rw2-CQ-XTG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UAj-6V-5U5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tSG-g8-K9U"/>
+                    <connections>
+                        <outlet property="temperatureLabel" destination="1d7-62-0fI" id="0TK-Ux-ye2"/>
+                        <outlet property="weatherText" destination="nwh-Zi-Mko" id="niJ-88-pcP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="51n-iI-pEV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2513.04347826087" y="-320.08928571428572"/>
+        </scene>
+        <!--Weather-->
+        <scene sceneID="CYD-XH-3A2">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QNE-1U-Od6" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Weather" image="cloud.moon" catalog="system" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ipf-lh-UFt">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="hQj-18-9Z9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="agO-pj-yAq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="749.27536231884062" y="-320.08928571428572"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="first" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
+        <image name="cloud.moon" catalog="system" width="64" height="42"/>
+        <image name="paintbrush" catalog="system" width="64" height="64"/>
+        <image name="person.3" catalog="system" width="72" height="35"/>
     </resources>
 </document>
