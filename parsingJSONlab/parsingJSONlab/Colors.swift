@@ -9,7 +9,7 @@
 import Foundation
 
 struct ColorsData: Codable {
-    let results: [Color]
+    let colors: [Color]
 }
 
 struct Color: Codable {
@@ -37,9 +37,9 @@ extension ColorsData {
             fatalError("could not get color data")
         }
         do{
-            let data = try Data(contentsOf: fileURL)
+            let data = try Data.init(contentsOf: fileURL)
             let colorData = try JSONDecoder().decode( ColorsData.self, from: data)
-            colorArr = colorData.results
+            colorArr = colorData.colors
         } catch {
             fatalError("\(error)")
         }
