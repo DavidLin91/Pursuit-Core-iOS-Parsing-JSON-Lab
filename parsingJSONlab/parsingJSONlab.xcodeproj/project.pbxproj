@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		633DC38423974E2E0005485F /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DC38323974E2E0005485F /* Colors.swift */; };
+		633DC38623974E5C0005485F /* DetailedColorsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633DC38523974E5C0005485F /* DetailedColorsVC.swift */; };
 		637349AB238EE84500C1ADCF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637349AA238EE84500C1ADCF /* AppDelegate.swift */; };
 		637349AD238EE84500C1ADCF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637349AC238EE84500C1ADCF /* SceneDelegate.swift */; };
 		637349B4238EE84500C1ADCF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 637349B2238EE84500C1ADCF /* Main.storyboard */; };
@@ -23,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		633DC38323974E2E0005485F /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		633DC38523974E5C0005485F /* DetailedColorsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedColorsVC.swift; sourceTree = "<group>"; };
 		637349A7238EE84500C1ADCF /* parsingJSONlab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = parsingJSONlab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		637349AA238EE84500C1ADCF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		637349AC238EE84500C1ADCF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,12 +76,14 @@
 			children = (
 				637349AA238EE84500C1ADCF /* AppDelegate.swift */,
 				637349AC238EE84500C1ADCF /* SceneDelegate.swift */,
-				6399F22A2395F7A900475EEB /* Weather.swift */,
-				6399F2282395EF4400475EEB /* ColorsVC.swift */,
+				637349B2238EE84500C1ADCF /* Main.storyboard */,
 				6399F2242395EDA600475EEB /* WeatherViewController.swift */,
 				6399F2302395FF7500475EEB /* DetailedWeatherVC.swift */,
+				6399F22A2395F7A900475EEB /* Weather.swift */,
+				6399F2282395EF4400475EEB /* ColorsVC.swift */,
+				633DC38523974E5C0005485F /* DetailedColorsVC.swift */,
+				633DC38323974E2E0005485F /* Colors.swift */,
 				637349C0238EE95800C1ADCF /* UserGeneratorVC.swift */,
-				637349B2238EE84500C1ADCF /* Main.storyboard */,
 				637349C2238EF2F300C1ADCF /* weather.json */,
 				637349C4238EF32100C1ADCF /* color.json */,
 				637349C6238EF33100C1ADCF /* randomUser.json */,
@@ -163,6 +169,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				6399F2252395EDA600475EEB /* WeatherViewController.swift in Sources */,
+				633DC38623974E5C0005485F /* DetailedColorsVC.swift in Sources */,
+				633DC38423974E2E0005485F /* Colors.swift in Sources */,
 				637349C1238EE95800C1ADCF /* UserGeneratorVC.swift in Sources */,
 				637349AB238EE84500C1ADCF /* AppDelegate.swift in Sources */,
 				6399F2312395FF7500475EEB /* DetailedWeatherVC.swift in Sources */,
