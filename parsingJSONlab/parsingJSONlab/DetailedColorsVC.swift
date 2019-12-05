@@ -9,22 +9,21 @@
 import UIKit
 
 class DetailedColorsVC: UIViewController {
-
+    var detailedColors: Color!
+    
+    @IBOutlet weak var hexLabel: UILabel!
+    @IBOutlet weak var rgbLabel: UILabel!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        loadData()
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func loadData() {
+        hexLabel.text = "Hex Value: \(detailedColors.hex["clean"] ?? "00000" )"
+        rgbLabel.text = "RGB VALUE: Red \(detailedColors.rgb.r) Green \(detailedColors.rgb.g) Blue \(detailedColors.rgb.b)"
     }
-    */
-
 }

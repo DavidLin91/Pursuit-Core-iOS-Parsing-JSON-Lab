@@ -29,7 +29,7 @@ struct Rgb: Codable {
     var b: Double
 }
 
-extension ColorsData {
+extension ColorsData { // used to get colors
     static func getColors() -> [Color]{
         var colorArr = [Color]()
         
